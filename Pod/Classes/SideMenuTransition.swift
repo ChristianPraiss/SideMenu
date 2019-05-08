@@ -290,6 +290,7 @@ open class SideMenuTransition: UIPercentDrivenInteractiveTransition {
         let statusBarOffset = size.height - menuView.bounds.height
         mainView.bounds.size.height = size.height - max(statusBarOffset, 0)
         mainView.frame.origin.y = 0
+	mainView.alpha = 0.4
         var statusBarFrame = UIApplication.shared.statusBarFrame
         // For in-call status bar, height is normally 40, which overlaps view. Instead, calculate height difference
         // of view and set height to fill in remaining space.
